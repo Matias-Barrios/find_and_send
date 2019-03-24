@@ -1,0 +1,5 @@
+test_folder/fakefile 2.txt
+test_folder/more spaces more.txt
+test_folder/spaced directory/spaced file.txt
+test_folder/spaces spaces.txt
+test_folder/test_subfolder/fakefile3.txt
