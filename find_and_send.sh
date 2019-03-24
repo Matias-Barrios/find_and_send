@@ -3,7 +3,7 @@
 FOLDER='test_folder'
 EXTENSION='*.txt'
 
-rm -f html.mail
+rm -f mail.html
 
 echo "
 From:$(whoami)@$(hostname)
@@ -14,19 +14,19 @@ Content-Type: text/html
 
 <html>
 <body>
-<table style=\"border-style:solid;border-color:BLUE;border-size: 1px 2px 3px 5px\">
-<thead>
+<table style=\"border-style:solid;border-color:BLACK;border-size: 1px 2px 3px 5px;\">
+<thead style=\"background-color:#2f97c4;border-style:solid; font-color:WHITE;\" >
 <tr>
-<td>
+<th>
 Keyword
-</td>
-<td>
+</th>
+<th>
 Subject
-</td>
-<td>
+</th>
+<th>
 Date
-</td>
-</tr>" >> html.mail
+</th>
+</tr>" >> mail.html
 
 all_files=$( find $FOLDER -type f -name "$EXTENSION" -printf "%p\n"  2>/dev/null )
 
@@ -55,7 +55,7 @@ do
                         $date
                     </td>
                 </tr>
-                " >> html.mail
+                " >> mail.html
             }
         done
     } &
@@ -67,7 +67,7 @@ echo "
 </table>
 </body>
 </html>
-" >> html.mail
+" >> mail.html
 
-[[ $found -eq 1 ]] && /usr/sbin/sendmail -t soymatiasbarrios@gmail.com < html.mail
+[[ $found -eq 1 ]] && /usr/sbin/sendmail -t soymatiasbarrios@gmail.com < mail.html
 
