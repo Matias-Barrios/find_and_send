@@ -1,4 +1,5 @@
 Subject: Hello from 'spaced file.txt'
+Date: Thursday 1st July 2018
 
 Hello!
 
