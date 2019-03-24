@@ -48,13 +48,9 @@ do
                     <td>
                         $keyword
                     </td>
-                </tr>
-                <tr>
                     <td>
                         $subject
                     </td>
-                </tr>
-                <tr>
                     <td>
                         $date
                     </td>
